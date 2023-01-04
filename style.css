@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+
+ * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right , #ece9e6 , #fff);
+}
+#title {
+  position: absolute;
+  top: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #20353b;
+  font-family: 'Seymour One', sans-serif;
+}
+
+.addtodo {
+  position: relative;
+  width: 300px;
+  margin-top: 8rem;
+}
+
+.addbtn {
+  position: absolute;
+  right: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #20353b;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.addbtn:active {
+  background-color: #27657a;
+}
+
+input {
+  padding: 10px 5px;
+  outline: none;
+  width: 100%;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.07);
+}
+
+input::placeholder {
+  transition: .5s;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
+.todolist {
+  width: 300px;
+}
+
+.todolist li  {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 8px 5px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.07);
+}
+
+.todolist li p {
+  font-size: 1rem;
+}
+
+.deletebtn {
+  border: none;
+  padding: .25rem;
+  background-color: transparent;
+}
+
+.removeAllBtn {
+  display: block;
+  margin: 1rem auto;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 1rem;
+  background-color: #20353b;
+  display: none;
+}
+
+.removeAllBtn:active {
+  background-color: #27657a;
+}
+
+@media(min-width:979px) {
+  #title {
+    font-size: 4rem;
+  }
+  .addtodo , .todolist {
+    width: 600px;
+  }
+  input {
+    padding: 1rem .25rem;
+  }
+}
